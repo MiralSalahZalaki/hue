@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.log
+filestore/
+sessions/
+venv/
+odoo-env/
+config/odoo.conf
+.vscode/
+.DS_Store
