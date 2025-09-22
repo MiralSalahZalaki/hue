@@ -8,3 +8,11 @@ odoo-env/
 config/odoo.conf
 .vscode/
 .DS_Store
+third_party_addons/dark_mode_knk/static/description/*.png
+third_party_addons/dark_mode_knk/static/description/*.jpg
+third_party_addons/dark_mode_knk/static/description/*.jpeg
+third_party_addons/dark_mode_knk/static/description/*.gif
+third_party_addons/dark_mode_knk/static/description/*.mp4
+third_party_addons/dark_mode_knk/static/description/*.webm
+third_party_addons/dark_mode_knk/static/description/*.avi
+third_party_addons/dark_mode_knk/static/description/*.mov
