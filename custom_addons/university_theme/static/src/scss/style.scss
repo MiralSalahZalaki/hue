@@ -2893,19 +2893,6 @@ input[type="radio"]:checked + label.theme[for="darkTheme"] {
   background-color: #f0f9ff !important;
 }
 
-/* Image Preview */
-.image-preview {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 2px dashed #dee2e6;
-  transition: border-color 0.2s ease;
-}
-
-.image-preview:hover {
-  border-color: #6366f1;
-}
-
 /* Toggle Switches */
 .form-check-input:checked {
   background-color: #4f46e5;
