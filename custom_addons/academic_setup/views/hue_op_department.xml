@@ -1,0 +1,52 @@
+<odoo>
+<!--    list view-->
+    <record id="faculty_list_view_inherit" model="ir.ui.view">
+    <field name="name">faculty.list.view.inherit</field>
+    <field name="model">op.department</field>
+    <field name="inherit_id" ref="openeducat_core.view_op_department_tree"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='parent_id']" position="after">
+            <field name="name_ar"/>
+            <field name="identifier"/>
+            <field name="ldap_dn"/>
+            <field name="check_questionnaire"/>
+            <field name="intern_year"/>
+        </xpath>
+    </field>
+</record>
+
+
+
+    <!--    form view-->
+       <record id="faculty_form_view_inherit" model="ir.ui.view">
+        <field name="name">faculty.form.view.inherit</field>
+        <field name="model">op.department</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_department_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='parent_id']" position="after">
+            <field name="name_ar"/>
+            <field name="identifier"/>
+           </xpath>
+            <xpath expr="//field[@name='code']" position="after">
+            <field name="ldap_dn"/>
+            <field name="check_questionnaire"/>
+            <field name="intern_year"/>
+
+        </xpath>
+        </field>
+    </record>
+
+
+
+
+
+
+<!--    action-->
+    <record id="faculty_action" model="ir.actions.act_window">
+        <field name="name">faculty.action</field>
+        <field name="res_model">op.department</field>
+    </record>
+
+     <!-- Menu -->
+    <menuitem id="faculty_menu_item" name="Faculties" parent="academic-configuration-menu" action="faculty_action"/>
+</odoo>

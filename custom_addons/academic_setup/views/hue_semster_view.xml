@@ -1,0 +1,58 @@
+<odoo>
+<!--    semester list view-->
+    <record id="semester_list_view" model="ir.ui.view">
+            <field name="name">semester.list.view</field>
+            <field name="model">hue.semester</field>
+            <field name="arch" type="xml">
+                    <list>
+                            <field name="name" string="Semester Name"/>
+                            <field name="sequence" string="Sequence"/>
+                            <field name="term_id" string="Term" />
+                            <field name="timetable_sds_current" string="Timetable - SDS Current"/>
+                            <field name="enroll_semester" string="Enroll Semester"/>
+                            <field name="postgraduate" string="Postgraduate"/>
+                            <field name="run_semester_gpa" string="Run Semester GPA"/>
+                            <field name="open_registration" string="Open Registration"/>
+                            <field name="run_gpa_postgraduate" string="Run GPA Postgraduate"/>
+                    </list>
+            </field>
+    </record>
+
+<!--    hue semester form view-->
+    <record id="semester_form_view" model="ir.ui.view">
+            <field name="name">semester.form.view</field>
+            <field name="model">hue.semester</field>
+            <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                            <group>
+                                    <field name="name"/>
+                                    <field name="sequence"/>
+                                    <field name="term_id"/>
+                                    <field name="timetable_sds_current"/>
+                            </group>
+                            <group>
+                                    <field name="enroll_semester"/>
+                                    <field name="postgraduate"/>
+                                    <field name="run_semester_gpa"/>
+                                    <field name="open_registration"/>
+                                    <field name="run_gpa_postgraduate"/>
+                            </group>
+                            </group>
+                        </sheet>
+                    </form>
+            </field>
+    </record>
+
+
+<!--    semester action-->
+    <record id="hue_semester_action" model="ir.actions.act_window">
+        <field name="name">hue.semester.action</field>
+        <field name="res_model">hue.semester</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+<!--    menu item for semester-->
+    <menuitem id="hue_semester_menu_item" name="Semesters" parent="academic-configuration-menu" action="hue_semester_action"/>
+</odoo>

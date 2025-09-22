@@ -1,0 +1,37 @@
+<odoo>
+    <record id="academic_year_view_list" model="ir.ui.view">
+        <field name="name">academic.year.list</field>
+        <field name="model">op.academic.year</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_academic_year_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <!--                    <field name="name"/>-->
+            </xpath>
+        </field>
+    </record>
+    <record id="academic_year_view_form" model="ir.ui.view">
+        <field name="name">academic.year.form</field>
+        <field name="model">op.academic.year</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_academic_year_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='start_date']" position="after">
+                <field name="timetable_current"/>
+                <field name="run_semester_gpa"/>
+                <field name="year_code"/>
+                <field name="invoice_date"/>
+                <field name="sequence"/>
+                <field name="year"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="academic_year_action" model="ir.actions.act_window">
+        <field name="name">Academic Year</field>
+        <field name="res_model">op.academic.year</field>
+    </record>
+    <menuitem
+        id="academic_year_menu_item"
+        name="Academic Year"
+        parent="academic-configuration-menu"
+        action="academic_year_action"
+    />
+</odoo>

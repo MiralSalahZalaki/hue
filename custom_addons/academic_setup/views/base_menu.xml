@@ -1,0 +1,11 @@
+<odoo>
+  <!-- Naming -->
+  <menuitem id="academic-setup-root-menu" 
+            name="Academic Setup"
+            web_icon="academic_setup/static/description/academic_setup_icon.png"
+
+              />
+  <menuitem id="academic-configuration-menu" 
+            name="Academic Configuration" 
+            parent="academic-setup-root-menu" />
+</odoo>
