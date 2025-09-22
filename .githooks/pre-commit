@@ -1,0 +1,7 @@
+#!/bin/bash
+if git diff --cached --name-only | grep -q "^third_party_addons/"; then
+    echo "❌ Cannot modify third_party_addons/ directly!"
+    echo "💡 Contact DevOps team for updates"
+    exit 1
+fi
+echo "✅ Commit approved"
