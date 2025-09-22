@@ -21,6 +21,7 @@
             'university_theme/static/src/scss/style.scss',
             'university_theme/static/src/xml/templates.xml',
             'university_theme/static/src/js/theme_utils.js',
+            'university_theme/static/src/js/theme_initializer.js',
             'university_theme/static/src/js/darkmode_systray_inherit.js',
             'university_theme/static/src/js/user_menu.js',
             'university_theme/static/src/js/apps_menu_patch.js',
