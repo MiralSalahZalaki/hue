@@ -1,14 +1,4 @@
 <odoo>
-    <record id="academic_year_view_list" model="ir.ui.view">
-        <field name="name">academic.year.list</field>
-        <field name="model">op.academic.year</field>
-        <field name="inherit_id" ref="openeducat_core.view_op_academic_year_tree"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='name']" position="after">
-                <!--                    <field name="name"/>-->
-            </xpath>
-        </field>
-    </record>
     <record id="academic_year_view_form" model="ir.ui.view">
         <field name="name">academic.year.form</field>
         <field name="model">op.academic.year</field>
@@ -22,7 +12,6 @@
                 <field name="sequence"/>
                 <field name="year"/>
                 <field name="join_year"/>
-                <field name="term_ids"/>
             </xpath>
         </field>
     </record>

@@ -1,7 +1,7 @@
 {
     'name': 'Academic Setup',
     'version': '18.0.1.0.0',
-    'category': 'Custom',
+    'category': 'Education',
     'summary': 'Custom HUE Academic Setup',
     'description': """
         This module manages academic setup.

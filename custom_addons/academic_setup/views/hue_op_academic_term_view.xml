@@ -17,7 +17,6 @@
             <xpath expr="//field[@name='parent_term']" position="after">
                 <field name="from_date"/>
                 <field name="to_date"/>
-                <field name="term_id"/>
                 <field name="active_validation"/>
                 <field name="active_run"/>
                 <field name="semester_id"/>

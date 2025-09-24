@@ -14,7 +14,6 @@ class HueAcademicYear(models.Model):
     sequence = fields.Integer(string='Sequence')
     year_code = fields.Integer(string='Year Code')
     invoice_date = fields.Date(string='Invoice Date')
-    term_ids = fields.One2many("op.academic.term","term_id",string='Terms')
     join_year = fields.Many2one('hue.joining.years',string='Join Yare')
 
 
