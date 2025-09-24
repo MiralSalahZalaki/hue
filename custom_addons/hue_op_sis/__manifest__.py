@@ -11,8 +11,8 @@
         'security/ir.model.access.csv',
 
         # Configuration
-        #views/hue_op_course.xml
-        #views/hue_op_batch.xml
+        #views/hue_op_course.xml,
+        #views/hue_op_batch.xml,
 
     ],
     'installable': True,
