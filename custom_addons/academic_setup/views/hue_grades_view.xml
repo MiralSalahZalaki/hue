@@ -1,0 +1,40 @@
+<odoo>
+    <record id="hue_grades_view_list" model="ir.ui.view">
+        <field name="name">hue grades list</field>
+        <field name="model">hue.grades</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" string='Name'/>
+            </list>
+        </field>
+    </record>
+    <record id="hue_grades_view_form" model="ir.ui.view">
+        <field name="name">hue grades form</field>
+        <field name="model">hue.grades</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="pass_grade" />
+                        <field name="add_to_gpa"/>
+                    </group>
+                    <group>
+                        <field name="theoretical_fail" />
+                        <field name="absent_grade"/>
+                        <field name="sequence"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="action_hue_grades" model="ir.actions.act_window">
+        <field name="name">Grades</field>
+        <field name="res_model">hue.grades</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="hue_grade_menu_item"
+              name="Grades"
+              parent="grade_and_assessments_root_menu"
+              action="action_hue_grades"/>
+</odoo>

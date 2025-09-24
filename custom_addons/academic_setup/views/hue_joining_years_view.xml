@@ -1,0 +1,37 @@
+<odoo>
+    <record id="hue_joining_years_view_list" model="ir.ui.view">
+        <field name="name">joining years list</field>
+        <field name="model">hue.joining.years</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="hue_joining_years_view_form" model="ir.ui.view">
+        <field name="name">joining years form</field>
+        <field name="model">hue.joining.years</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name" string="Name"/>
+                        <field name="active" string="Active"/>
+                    </group>
+                    <group>
+                        <field name="d_id" string="External ID"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="action_hue_joining_years" model="ir.actions.act_window">
+        <field name="name">joining years</field>
+        <field name="res_model">hue.joining.years</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="hue_joining_years_menu_item"
+              name="Joining Years"
+              parent="menu_academic_configuration"
+              action="action_hue_joining_years"/>
+</odoo>

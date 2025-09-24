@@ -21,17 +21,15 @@
                 <field name="invoice_date"/>
                 <field name="sequence"/>
                 <field name="year"/>
+                <field name="join_year"/>
+                <field name="term_ids"/>
             </xpath>
         </field>
-    </record>
-    <record id="academic_year_action" model="ir.actions.act_window">
-        <field name="name">Academic Year</field>
-        <field name="res_model">op.academic.year</field>
     </record>
     <menuitem
         id="academic_year_menu_item"
         name="Academic Year"
-        parent="academic-configuration-menu"
-        action="academic_year_action"
+        parent="menu_academic_configuration"
+        action="openeducat_core.act_op_academic_year_view"
     />
 </odoo>

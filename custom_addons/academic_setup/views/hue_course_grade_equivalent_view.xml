@@ -1,0 +1,29 @@
+<odoo>
+    <!--  list view for hue course grades equivalent  -->
+    <record id="hue_course_grade_equivalent_list_view" model="ir.ui.view">
+        <field name="name">Course Grade Equivalent List View</field>
+        <field name="model">op.grade.configuration</field>
+        <field name="inherit_id" ref="openeducat_exam.view_op_grade_configuration_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='min_per']" position="before">
+                <field name="course_id"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- form view for hue course grades equivalent    -->
+    <record id="hue_course_grade_equivalent_form_view" model="ir.ui.view">
+        <field name="name">Course Grade Equivalent Form View</field>
+        <field name="model">op.grade.configuration</field>
+        <field name="inherit_id" ref="openeducat_exam.view_op_grade_configuration_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='min_per']" position="before">
+                <field name="course_id"/>
+            </xpath>
+        </field>
+    </record>
+    <!--    menu item for hue course grades equivalent-->
+    <menuitem   id="hue_course_grade_equivalent_menu_item" 
+                name="Course Grade Equivalent" 
+                parent="grade_and_assessments_root_menu" 
+                action="openeducat_exam.act_open_op_grade_configuration_view"/>
+</odoo>

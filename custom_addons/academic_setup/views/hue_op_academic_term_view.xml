@@ -1,0 +1,33 @@
+<odoo>
+    <record id="academic_term_view_list" model="ir.ui.view">
+        <field name="name">academic term list</field>
+        <field name="model">op.academic.term</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_academic_term_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <!--                    <field name="name"/>-->
+            </xpath>
+        </field>
+    </record>
+    <record id="academic_term_view_form" model="ir.ui.view">
+        <field name="name">academic term list</field>
+        <field name="model">op.academic.term</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_academic_term_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_term']" position="after">
+                <field name="from_date"/>
+                <field name="to_date"/>
+                <field name="term_id"/>
+                <field name="active_validation"/>
+                <field name="active_run"/>
+                <field name="semester_id"/>
+            </xpath>
+        </field>
+    </record>
+    <menuitem
+        id="academic_term_menu_item"
+        name="Academic Term"
+        parent="menu_academic_configuration"
+        action="openeducat_core.act_op_academic_term_view"
+    />
+</odoo>

@@ -1,9 +1,9 @@
 from odoo import models, fields, api
 
 
-class AcademicYear(models.Model):
+class HueAcademicYear(models.Model):
     _inherit = 'op.academic.year'
-    _description = 'Academic Year'
+    _description = ' Hue Academic Year'
 
     year = fields.Selection(
         [(str(y), str(y)) for y in range(2010, 2027)],
@@ -14,8 +14,8 @@ class AcademicYear(models.Model):
     sequence = fields.Integer(string='Sequence')
     year_code = fields.Integer(string='Year Code')
     invoice_date = fields.Date(string='Invoice Date')
-    # join_yare = fields.Many2one(string='Join Yare')
-    # term_ids = fields.one2many(string='Terms')
+    term_ids = fields.One2many("op.academic.term","term_id",string='Terms')
+    join_year = fields.Many2one('hue.joining.years',string='Join Yare')
 
 
 

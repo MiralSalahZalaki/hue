@@ -1,11 +1,26 @@
 <odoo>
-  <!-- Naming -->
-  <menuitem id="academic-setup-root-menu" 
-            name="Academic Setup"
-            web_icon="academic_setup/static/description/academic_setup_icon.png"
-
-              />
-  <menuitem id="academic-configuration-menu" 
-            name="Academic Configuration" 
-            parent="academic-setup-root-menu" />
+    <menuitem 
+        id="menu_academic_setup_root"
+        name="Academic Setup"
+        web_icon="academic_setup,static/description/academic_setup_icon.png"
+    />
+    <menuitem
+        id="menu_academic_configuration"
+        name="Academic Configuration"
+        parent="menu_academic_setup_root"
+    />
+    <menuitem 
+        id="menu_registration_config" 
+        name="Registration Config" 
+        parent="menu_academic_setup_root" />
+    <menuitem
+        id="financial_menu"
+        name="Financial"
+        parent="menu_academic_setup_root"
+    />
+    <menuitem
+        id="grade_and_assessments_root_menu"
+        name="Grade &amp; Assessments"
+        parent="menu_academic_setup_root"
+    />
 </odoo>

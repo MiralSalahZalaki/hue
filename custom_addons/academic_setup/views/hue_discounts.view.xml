@@ -1,0 +1,40 @@
+<odoo>
+    <record id="hue_discounts_view_list" model="ir.ui.view">
+        <field name="name">hue discounts list</field>
+        <field name="model">hue.discounts</field>
+        <field name="arch" type="xml">
+            <list>
+<!--                <field name="name"/>-->
+            </list>
+        </field>
+    </record>
+
+    <record id="hue_discounts_view_form" model="ir.ui.view">
+        <field name="name">hue discounts form</field>
+        <field name="model">hue.discounts</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+<!--                    <group>-->
+<!--                        <field name="name" string="Name"/>-->
+<!--                        <field name="active" string="Active"/>-->
+<!--                    </group>-->
+<!--                   <group>-->
+<!--                        <field name="d_id" string="External ID"/>-->
+<!--                    </group>-->
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hue_discounts" model="ir.actions.act_window">
+        <field name="name">discounts</field>
+        <field name="res_model">hue.discounts</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="hue.discounts_menu_item"
+              name="Discounts"
+              parent="financial_menu"
+              action="action_hue_discounts"/>
+</odoo>

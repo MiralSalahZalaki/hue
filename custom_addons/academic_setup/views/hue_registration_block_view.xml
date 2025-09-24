@@ -1,0 +1,39 @@
+<odoo>
+<!-- list view for hue registration block   -->
+    <record id="hue_registration_block_list_view" model="ir.ui.view">
+            <field name="name">Registration Block List View</field>
+            <field name="model">hue.registration.block</field>
+            <field name="arch" type="xml">
+                    <list>
+                            <field name="name"/>
+                    </list>
+            </field>
+    </record>
+
+<!-- form view for hue registration block   -->
+    <record id="hue_registration_block_form_view" model="ir.ui.view">
+            <field name="name">Registration Block Form View</field>
+            <field name="model">hue.registration.block</field>
+            <field name="arch" type="xml">
+                    <form>
+                            <sheet>
+                                    <group>
+                                            <field name="name"/>
+                                    </group>
+                            </sheet>
+                    </form>
+            </field>
+    </record>
+
+
+
+<!--  action for hue registration block  -->
+    <record id="hue_registration_block_action" model="ir.actions.act_window">
+            <field name="name">hue Registration Block action</field>
+            <field name="res_model">hue.registration.block</field>
+            <field name="view_mode">list,form</field>
+    </record>
+
+<!--    menu item for hue registration block -->
+    <menuitem id="hue_registration_block_menu_item" name="Registration Block" parent="menu_registration_config" action="hue_registration_block_action"/>
+</odoo>

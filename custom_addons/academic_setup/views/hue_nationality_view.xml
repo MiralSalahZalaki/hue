@@ -1,0 +1,48 @@
+<odoo>
+<!--    list view for hue nationalities -->
+    <record id="hue_nationalities_list_view" model="ir.ui.view">
+            <field name="name">Nationalities List View</field>
+            <field name="model">hue.nationality</field>
+            <field name="arch" type="xml">
+                    <list>
+                            <field name="name"/>
+                            <field name="en_name"/>
+                    </list>
+            </field>
+    </record>
+
+<!--    form view for hue nationalities -->
+    <record id="hue_nationalities_form_view" model="ir.ui.view">
+            <field name="name">Nationalities Form View</field>
+            <field name="model">hue.nationality</field>
+            <field name="arch" type="xml">
+                    <form>
+                            <sheet>
+                                    <group>
+                                            <group>
+                                                    <field name="name"/>
+                                                    <field name="en_name"/>
+                                            </group>
+                                            <group>
+                                                    <field name="d_id"/>
+                                                    <field name="foreign_nationality"/>
+                                            </group>
+                                    </group>
+                            </sheet>
+                    </form>
+            </field>
+    </record>
+
+
+
+
+<!--    action for hue nationalities -->
+    <record id="hue_nationalities_action" model="ir.actions.act_window">
+            <field name="name">hue Nationalities action</field>
+            <field name="res_model">hue.nationality</field>
+            <field name="view_mode">list,form</field>
+    </record>
+
+<!--    menu item for hue nationalities-->
+    <menuitem id="hue_nationalities_menu_item" name="Nationalities" parent="menu_registration_config" action="hue_nationalities_action"/>
+</odoo>

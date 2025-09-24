@@ -1,0 +1,50 @@
+<odoo>
+    <record id="hue_installments_view_list" model="ir.ui.view">
+        <field name="name">hue installments list</field>
+        <field name="model">hue.installments</field>
+        <field name="arch" type="xml">
+            <list class="installments_list">
+                <field name="name" string='Name'/>
+                <field name="installments" string='Installments'/>
+                <field name="one_time" string='One Time'/>
+                <field name="extra_inv" string='Extra Inv'/>
+                <field name="foreign_nationality" string='Foreign Nationality'/>
+                <field name="special_case" string='Special Case'/>
+                <field name="currency" string='Currency'/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hue_installments_view_form" model="ir.ui.view">
+        <field name="name">hue installments form</field>
+        <field name="model">hue.installments</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                  <group>
+                      <field name="name" />
+                      <field name="installments" />
+                      <field name="one_time"/>
+                  </group>
+                    <group>
+                         <field name="extra_inv" />
+                         <field name="foreign_nationality"/>
+                         <field name="special_case"/>
+                         <field name="currency"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hue_installments" model="ir.actions.act_window">
+        <field name="name">Installments</field>
+        <field name="res_model">hue.installments</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="hue_installments_menu_item"
+              name="Installments"
+              parent="financial_menu"
+              action="action_hue_installments"/>
+</odoo>

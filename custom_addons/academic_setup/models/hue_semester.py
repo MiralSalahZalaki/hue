@@ -6,7 +6,7 @@ class HueSemester(models.Model):
     _description = 'Hue Semester'
 
     name = fields.Char(string='Name', required=True)
-    sequence = fields.Integer(string='Sequence', default=0)
+    sequence = fields.Integer(string='Sequence', default=1)
     term_id=fields.Many2one('op.academic.term', string='Term', required=True)
     timetable_sds_current = fields.Boolean(string='Timetable SDS Current')
     enroll_semester=fields.Boolean(string='Enroll Semester')
