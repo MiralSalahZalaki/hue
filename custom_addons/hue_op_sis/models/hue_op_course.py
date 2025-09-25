@@ -40,7 +40,7 @@ class HueCourseResultPublish(models.Model):
     _description = 'Hue Course Result Publish'
 
     course_id = fields.Many2one('op.course', string='Course')
-    publish = fields.Selection([('open', 'Open'),('close', 'Close'), ('publish', 'Publish')], default='open', string='Publish')
+    publish = fields.Selection([('open', 'Open'),('close', 'Close'), ('publish', 'Publish')], default='open', string='Publish') # Comment
     academic_year_id = fields.Many2one('op.academic.year', string='Academic Year')
     semester_id = fields.Many2one('hue.semester', string='Semester')
 
