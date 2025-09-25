@@ -1,0 +1,88 @@
+<odoo>
+    <!-- list for inherit view edit hue op course  -->
+    <record id="view_op_course_tree_inherit_hue" model="ir.ui.view">
+        <field name="name">OP Course Tree Inherit HUE</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_course_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fees_term_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="section" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- form for inherit view edit hue op course -->
+    <record id="view_op_course_form_inherit_hue" model="ir.ui.view">
+        <field name="name">OP Course Form Inherit HUE</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_course_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fees_term_id']" position="replace" />
+            <xpath expr="//field[@name='max_unit_load']" position="replace" />
+            <xpath expr="//field[@name='min_unit_load']" position="replace" />
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="section" />
+                <field name="credit_hours" />
+                <field name="core_hours" />
+                <field name="faculty_id" />
+                <field name="training_hours" />
+                <field name="horus_all_semesters" />
+                <field name="control_email" />
+            </xpath>
+            <xpath expr="//field[@name='program_id']" position="after">
+                <field name="intern_year" />
+                <field name="postgraduate" />
+                <field name="credit_hours" />
+                <field name="elective_hours" />
+                <field name="project_hours" />
+                <field name="honors_hours" />
+                <field name="faculty_ids" widget="many2many_tags" />
+                <field name="sds_to_be_deleted" />
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='subject']" position="after">
+                <page string="Result Publish">
+                    <field name="course_results_publish_ids" mode="list,form">
+                        <list>
+                            <field name="academic_year_id" string="Academic Year" />
+                            <field name="semester_id" string="Semester" />
+                            <field name="publish" string="Publish" />
+                        </list>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <group>
+                                        <field name="course_id" string="Course" />
+                                        <field name="semester_id" string="Semester" />
+                                    </group>
+                                    <group>
+                                        <field name="academic_year_id" string="Academic Year" />
+                                        <field name="publish" string="Publish" />
+                                    </group>
+                                </group>
+                            </sheet>
+
+                        </form>
+                    </field>
+
+                </page>
+                <page string="Control Management">
+                    <group>
+                        <field name="fr_percent" />
+                        <field name="fr_grade" />
+                        <field name="absence_grade" />
+                        <field name="pass_degree" />
+                        <field name="second_pass_degree" />
+                        <field name="deduction_grade_first" />
+                        <field name="deduction_grade_second" />
+                    </group>
+                </page>
+            </xpath>
+
+
+        </field>
+    </record>
+
+
+</odoo>
