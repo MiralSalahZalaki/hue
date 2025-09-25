@@ -1,0 +1,63 @@
+<odoo> 
+   
+    <record id="hue_op_batch_view_form" model="ir.ui.view">
+        <field name="name">batch form</field>
+        <field name="model">op.batch</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='course_id']" position="after">
+                <field name="academic_year"/>
+                <field name="semester"/>
+                <field name="default_week_start"/>
+                <field name="default_week_end"/>
+            </xpath>   
+            <xpath expr="//field[@name='end_date']" position="after"> 
+                <field name="tree_clo_acl_ids"/>
+                <field name="control_allowed"/>
+                <field name="allow_registration_invoicing"/>
+                <field name="intern_batch"/>
+            </xpath>
+            <xpath expr="//sheet/group" position="after">
+               <notebook>
+                    <page name="Subject Registration">
+                        <field name="subject_registration_ids" widget="one2many" mode="list,form" >
+                            <list>
+                                    <field name="subject_id"/>
+                                    <field name="subject_levels"/>
+                                    <field name="lecture_hours"/>
+                                    <field name="section_hours"/> 
+                                    <field name="practical_hours"/>
+                                    <field name="group_count"/>
+                                    <field name="selection_count"/>
+                                    <field name="practical_count"/>  
+                            </list>
+                            <form>
+                                <group>
+                                            <group>
+                                                <field name="batch_id" />
+                                                <field name="subject_id" />
+                                                <field name="subject_levels" />
+                                                <field name="section_hours"/>
+                                            </group>
+                                            <group>
+                                                    <field name="practical_hours" />
+                                                    <field name="group_count"/>
+                                                    <field name="selection_count"/>
+                                                    <field name="practical_count"/>
+                                           </group>
+                                </group>
+                            </form>
+
+                        </field>
+                    
+                    </page>
+                </notebook>
+            </xpath>    
+                
+        </field>
+    </record>
+
+
+
+</odoo>
+
